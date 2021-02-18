@@ -1,0 +1,16 @@
+<!--<form action="/checkout" method="POST">-->
+    <%= cartItem[0].price %>
+    <button type="submit">BTN</button>
+<!---</form>--->
+
+
+
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe("pk_test_51ILqUoD9k6L3GgSyoEP2ruoPTdgUaGpKwEE5tAOPG6V32ufl6XM1dOS61JeOLZCazodsBsEScouBcIBLtF1LcUQ800GQAtXMIX");
+    document.querySelector("button").addEventListener("click",()=>{
+        
+        stripe.redirectToCheckout({ sessionId:"<%=sessionId%>"})
+    })
+</script>

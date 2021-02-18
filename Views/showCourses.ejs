@@ -1,0 +1,14 @@
+<h1> Kurser!</h1>
+<ul>
+   
+<% for(let i = 0; i < data.length; i++) { %>
+    <div>
+        <p><%=data[i].name%></p>
+        
+        <p><%=data[i].description%></p>
+        <p><%=data[i].price%>:-</p>
+        <a href="/addToShoppingCart/<%=data[i].id%>">Add to Cart</a>
+        <p>===================</p>
+    </div>
+<%}%>
+</ul>
